@@ -1,0 +1,63 @@
+ <!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <title>chatapp</title>
+        <link rel="stylesheet" href="chatapp.css">
+    </head>
+    <body>
+        <header>
+            <div class="head">
+            <h1>UD-ChatApp</h1><br><br>
+           <!--<a href = "aide.html"><img src = "aide.jpeg"></a>-->
+            </div>
+        </header>
+        <div class="chat-zone" id="chatzone">
+        <!--chatapp-zone-->
+       <!-- <p>Bienvenue sur <span style="size:10em;"><strong>UD-ChatApp</strong></span> une plate forme de causerie cree par des etudiants de <strong>l'IUT</strong> pour les etudiants de <strong> L'Universite de Douala</strong>. Nous mettons un point d'honneur sur le respect mutuelle sous tous ces sens et ses formes ainsi que l'entretient d'un esprit de Paix. Comportons nous de maniere responsable et conscieuse! ceci etant dit nous vous souhaitons de passer une tres belle experience. </p>-->
+        <p style="color:gray; size: 0.70"><i>Ceci est la zone dans laquelle s'affichera les differentes discussions qui auront lieu sur cette plate forme.</i></p>
+        </div>
+        <div class="msg-zone">
+            <!--<input type="file">-->
+           <!--<input id ="prenom" type="text" placeholder="Username">-->
+            <input id="message" type="text" placeholder="Messages!!!">
+            <button id="btn-send">Envoyer</button>
+        </div>
+        <script src = "/socket.io/socket.io.js"></script>
+        <script>
+            const socket = io();
+            const msginput = document.getElementById('message');
+            const send = document.getElementById('btn-send');
+            const chatzone = document.getElementById('chatzone');
+            
+            const username = prompt ("Rappeller votre nom pour echanger (Obligatoire,maximum sept lettres)");
+            const usernameinput = username ? username.trim(): "anonyme";
+            send.addEventListener ('click',()=>{
+                const text = msginput.value.trim();
+                if (usernameinput && text) {
+                    //envoi serveur
+                    socket.emit('chat message', {
+                        user : usernameinput,
+                        text: text
+                });
+                    msginput.value ="";
+            }
+        });
+                
+                    socket.on('chat message', (data) => {
+                        console.log('message recu de serveur:',data);
+                   const msgHTML = `
+                   <div class="messagerie" style="display:flex; text-align:right;">
+                   <p>
+                    <span class="usernameinput" ><strong>${data.user}</strong></span>
+                    <div class="msg-box">
+                    <span class="msginput" style = " font-size : 1.5em">${data.text}</span>
+                    </div>
+                   </p>
+                </div>`;
+                   chatzone.innerHTML += msgHTML;
+                   chatzone.scrollTop = chatzone.scrollHeight;
+            });
+        </script>
+    </body>
+</html>

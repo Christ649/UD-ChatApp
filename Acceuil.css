@@ -1,0 +1,41 @@
+body {
+    background-color:whitesmoke;
+    margin:0px;
+    padding:0px;
+    font-family: 'Times New Roman', Times, serif;
+    background-image: url(image_bc53fb47.png);
+    background-size:cover;
+     background-position: center;
+     background-repeat: no-repeat;
+     display: block;
+     text-align: center;
+     justify-content: center;
+}
+span {
+    font-size: 5em;
+    animation : slide 0.5s forwards;
+    color: rgb(0, 0, 0);
+    padding-top: 200px;
+    font-weight: 800;
+}
+button {
+    border:none;
+    background-color: bisque;
+    width: 150px;
+    height: 60px;
+    border-radius: 10px;
+    box-shadow: 10px 10px 10px gray;
+    font-size: 30px;
+    animation : translation 0.5s forwards;
+}
+@keyframes translation {
+    0% {
+        transform: translateX(-100px);
+    }
+     100% {
+        transform: translateX(0px);
+    }
+}
+button:hover{
+    background-color: aquamarine;
+}

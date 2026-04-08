@@ -1,0 +1,107 @@
+body {
+    background-color: rgb(255, 255, 255);
+    margin:2px;
+    padding:2px;
+    font-family: 'Courier New', Courier, monospace;
+}
+.head {
+    width:auto;
+    height: 100px;
+    border: none;
+    box-shadow: 0px 0px 0px gray;
+    padding: 5px;
+    background-color:rgb(155, 146, 146);
+   padding-left: 5px;
+}
+h1 {
+    font-size: 3em;
+    text-align: left;
+    color:blue;
+    text-shadow: 4px 4px 4px aquamarine;
+}
+/*En rapport avec l'identification de la prochaine mise a jour*/
+
+    
+.chat-zone {
+    background-color: wheat;
+    width: auto;
+    height: 70vh;
+    border:none;
+    box-shadow: 0px 0px 0px gray;
+    border-left:1px gray;
+    border-top: 1px gray;
+     overflow-Y: scroll;
+     position:relative;
+     background-image: URL(image_16ce2117.png);
+     background-size:cover;
+     background-position: center;
+     background-repeat: no-repeat;
+}
+.chat-zone p {
+    text-align: center;
+    padding:15px;
+}
+.msg-zone {
+    border : none;
+    width: auto;
+    height: 100px;
+    background-color:  rgb(155, 146, 146);
+    box-shadow: 0px 0px 0px gray;
+    display: flex;
+    justify-content: center;
+    padding-top: 25px;
+}
+.msg-zone input {
+    width:50vw;
+    height: 40px;
+    text-align: left;
+    border-radius: 20px;
+    font-size:1.5em;
+    margin:10px;
+}
+.msginput {
+    border:none;
+    border-top:1px solid gray;
+    border-left:1px solid gray;
+    width:auto;
+    height:auto;
+    background-color: aliceblue;
+    box-shadow: 2px 2px 2px grey;
+    border-radius:4px;
+    padding:5px;
+  display: flex;
+  flex-direction: column; /* Aligne les éléments verticalement */
+  align-items: flex-start; /* Aligne à gauche */
+  margin:10px ;
+}
+.usernameinput {
+    font-size: 1.5em;
+}
+button {
+    width:100px;
+    height: 40px;
+    border-radius: 20px;
+    font-size:1.5em;
+    background-color: #2399e7;
+    margin:10px;
+}
+button:hover {
+    background-color:rgb(10, 168, 155);
+}
+#prenom {
+    width:40px;
+    height: 40px;
+    text-align: left;
+    border-radius: 20px;
+    font-size:1.5em;
+    margin:10px;
+
+}
+#btn {
+    width:13vw;
+    height: 7vh;
+    border-radius: 20px;
+     margin:0px;
+}
+
+

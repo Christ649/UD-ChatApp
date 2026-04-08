@@ -1,0 +1,109 @@
+body {
+    background-color:rgb(155, 146, 146);
+    margin: 0px;
+    padding:0px;
+    display: block;
+    justify-content: center;
+    text-align: center;
+    
+    align-items: center;
+    place-items: center;
+    margin:0px;
+}
+img {
+    width:300px;
+    height: 300px;
+    border:none;
+    border-radius:50%;
+    padding:70px;
+}
+.presentation {
+    border-top: 1px solid whitesmoke;
+    border: none ;
+    width: 850px;
+    height: auto;
+    border-radius: 10px;
+    text-overflow: inherit;
+    font-size: 3em;
+    font-family: 'Times New Roman', Times, serif;
+    box-shadow: 20px 20px 20px rgb(0, 0, 0);
+    background-color: white;
+    padding: 20px;
+     animation : translation 3s forwards;
+}
+@keyframes translation {
+    0% {
+        transform: translateX(-400px);
+    }
+     100% {
+         transform: translateX(0px);
+    }
+}
+       
+.objectif {
+    border-top: 1px solid whitesmoke;
+    border: none ;
+    width: 850px;
+    height: auto;
+    border-radius: 10px;
+    text-overflow: inherit;
+    font-size: 3em;
+    font-family: 'Times New Roman', Times, serif;
+    box-shadow: 20px 20px 20px rgb(0, 0, 0);
+    background-color: white;
+    padding: 20px;
+     animation : translation 5s forwards;
+}
+ @keyframes translation {
+    0% {
+        transform: translateX(-400px);
+    }
+     100% {
+         transform: translateX(0px);
+    }
+     }
+       
+.obligation{
+    border-top: 1px solid whitesmoke;
+    border: none ;
+    width: 850px;
+    height: auto;
+    border-radius: 10px;
+    text-overflow: inherit;
+    font-size: 3em;
+    font-family: 'Times New Roman', Times, serif;
+    box-shadow: 20px 20px 20px rgb(0, 0, 0);
+    background-color: white;
+    padding: 20px;   
+    animation : translation 7s forwards;
+}
+@keyframes translation {
+    0% {
+        transform: translateX(-400px);
+    }
+     100% {
+        transform: translateX(0px);
+    }
+
+}
+button {
+    border:none;
+    background-color: bisque;
+    width: 300px;
+    height: 100px;
+    border-radius: 10px;
+    box-shadow: 10px 10px 10px whitesmoke;
+    font-size: 60px;
+    animation : translation 0.5s forwards;
+}
+@keyframes translation {
+    0% {
+        transform: translateX(-400px);
+    }
+     100% {
+        transform: translateX(0px);
+    }
+}
+button:hover{
+    background-color: aquamarine;
+}
